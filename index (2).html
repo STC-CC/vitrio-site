@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitrio – Votre site web professionnel, prêt en 7 jours</title>
+<meta name="description" content="Sites vitrine clé en main pour commerçants, artisans et indépendants partout en France. Création, hébergement et nom de domaine inclus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marine:#16345A; --marine-d:#0E2441; --ciel:#EAF1F8; --blanc:#FFFFFF;
+  --soleil:#F0A81B; --texte:#1D2A3A; --doux:#5A6B80; --trait:#CFDBE8;
+  --titre:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --corps:"Public Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1.0625rem/1.6 var(--corps);color:var(--texte);background:var(--blanc)}
+img,svg{max-width:100%}
+a{color:var(--marine)}
+:focus-visible{outline:3px solid var(--soleil);outline-offset:3px}
+.wrap{width:min(1080px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);line-height:1.1;margin:0;color:var(--marine-d)}
+h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0 0 1rem}
+.btn{display:inline-block;padding:.9rem 1.6rem;border-radius:999px;font:600 1rem var(--corps);text-decoration:none;border:2px solid var(--soleil);background:var(--soleil);color:var(--marine-d);cursor:pointer}
+.btn:hover{background:#FFC24A;border-color:#FFC24A}
+.btn.alt{background:transparent;color:var(--blanc);border-color:rgba(255,255,255,.55)}
+.btn.alt:hover{background:rgba(255,255,255,.12)}
+
+/* Store de boutique */
+.store{height:64px;background:repeating-linear-gradient(90deg,var(--marine) 0 40px,var(--blanc) 40px 80px);
+  -webkit-mask:linear-gradient(#000 0 0) top/100% 44px no-repeat,radial-gradient(circle at 20px 0,#000 19.5px,#0000 20px) bottom/40px 20px repeat-x;
+  mask:linear-gradient(#000 0 0) top/100% 44px no-repeat,radial-gradient(circle at 20px 0,#000 19.5px,#0000 20px) bottom/40px 20px repeat-x}
+.bandeau{background:var(--ciel);border-bottom:1px solid var(--trait)}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.logo{font:800 1.5rem var(--titre);color:var(--marine-d);text-decoration:none;letter-spacing:-.02em}
+nav a{margin-left:1.4rem;text-decoration:none;font-weight:500;color:var(--texte)}
+nav a:hover{text-decoration:underline}
+@media(max-width:640px){nav a.hide{display:none}}
+
+/* Hero */
+.hero{background:var(--marine);color:var(--blanc);padding:0 0 4.5rem}
+.hero .store{margin-bottom:3rem}
+.hero h1{color:var(--blanc);max-width:15ch}
+.hero p.lead{font-size:1.25rem;max-width:36rem;margin:1.5rem 0 2rem;color:#D6E3F2}
+.hero .actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.hero small{display:block;margin-top:1.4rem;color:#B5C8DE}
+
+/* Sections */
+section{padding:4.5rem 0}
+.intro{max-width:40rem;color:var(--doux);margin-top:1rem}
+.liste{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem 2.5rem;margin-top:2.5rem}
+.liste h3{font-size:1.15rem;margin-bottom:.4rem}
+.liste p{color:var(--doux);margin:0}
+.liste div{border-top:3px solid var(--soleil);padding-top:1rem}
+
+/* Exemples */
+.exemples{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem}
+.exemple{display:flex;flex-direction:column;border:1px solid var(--trait);border-radius:14px;padding:1.6rem;text-decoration:none;color:var(--texte);background:var(--blanc)}
+.exemple:hover{border-color:var(--marine)}
+.exemple h3{font-size:1.25rem;margin-bottom:.4rem}
+.exemple p{color:var(--doux);flex:1}
+.exemple span{font-weight:600;color:var(--marine);text-decoration:underline}
+
+/* Tarifs */
+#tarifs{background:var(--ciel)}
+.formules{display:grid;grid-template-columns:minmax(0,440px);gap:1.5rem;margin-top:2.5rem;align-items:stretch}
+.formule{background:var(--blanc);border:1px solid var(--trait);border-radius:14px;padding:2rem 1.7rem;display:flex;flex-direction:column}
+.formule.pro{border:3px solid var(--marine)}
+.formule .for{color:var(--doux);margin:.3rem 0 1.2rem;min-height:3.2em}
+.prix{font:800 2.6rem var(--titre);color:var(--marine-d);line-height:1}
+.prix span{font:500 1rem var(--corps);color:var(--doux)}
+.abo{margin:.4rem 0 1.4rem;font-weight:600}
+.formule ul{list-style:none;margin:0 0 1.6rem;padding:0;flex:1}
+.formule li{padding:.4rem 0 .4rem 1.7rem;position:relative;border-top:1px solid var(--ciel)}
+.formule li::before{content:"";position:absolute;left:.15rem;top:.85rem;width:.8rem;height:.45rem;border-left:3px solid var(--marine);border-bottom:3px solid var(--marine);transform:rotate(-45deg)}
+.formule .btn{text-align:center}
+.notes{margin-top:2rem;color:var(--doux);font-size:.97rem}
+.notes li{margin-bottom:.3rem}
+
+/* Étapes */
+.etapes{counter-reset:e;list-style:none;margin:2.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+.etapes li{counter-increment:e;position:relative;padding-top:3.4rem}
+.etapes li::before{content:counter(e);position:absolute;top:0;left:0;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--marine);color:var(--blanc);font:700 1.2rem var(--titre);display:grid;place-items:center}
+.etapes h3{font-size:1.15rem;margin-bottom:.3rem}
+.etapes p{color:var(--doux);margin:0}
+
+/* FAQ */
+#faq{background:var(--ciel)}
+details{border-bottom:1px solid var(--trait);padding:1.1rem 0;max-width:46rem}
+summary{cursor:pointer;font:600 1.1rem var(--corps);color:var(--marine-d)}
+details p{margin:.7rem 0 0;color:var(--doux)}
+
+/* Contact */
+#contact{background:var(--marine);color:var(--blanc)}
+#contact h2{color:var(--blanc)}
+#contact .intro{color:#C9D9EB}
+footer{background:var(--marine-d);color:#9FB4CC;padding:2rem 0;font-size:.92rem}
+footer a{color:#C9D9EB}
+</style>
+</head>
+<body>
+
+<div class="bandeau">
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="#">Vitrio</a>
+      <nav aria-label="Navigation principale">
+        <a class="hide" href="#exemples">Exemples</a>
+        <a class="hide" href="#tarifs">Prix</a>
+        <a class="hide" href="#etapes">Comment ça marche</a>
+        <a class="hide" href="#faq">Questions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="store" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Votre commerce a sa place sur Google.</h1>
+    <p class="lead">Je crée le site de votre commerce, de votre atelier ou de votre cabinet. Il est en ligne en 7 jours, hébergé et maintenu, pour un prix fixe annoncé dès le départ.</p>
+    <div class="actions">
+      <a class="btn" href="#contact">Demander mon site</a>
+      <a class="btn alt" href="#tarifs">Voir le prix</a>
+    </div>
+    <small>Pour les commerçants, artisans et indépendants, partout en France.</small>
+  </div>
+</div>
+
+<section id="offre">
+  <div class="wrap">
+    <h2>Un site simple, qui fait son travail</h2>
+    <p class="intro">Un site créé pour votre activité, pas un modèle copié. Vos clients vous cherchent sur leur téléphone avant de venir : votre site leur donne vos horaires, vos services et un moyen de vous contacter.</p>
+    <div class="liste">
+      <div><h3>Lisible sur mobile</h3><p>Votre site s'affiche bien sur téléphone, tablette et ordinateur.</p></div>
+      <div><h3>Tout est inclus</h3><p>Nom de domaine, hébergement et sécurité sont compris dans l'abonnement.</p></div>
+      <div><h3>Prêt en 7 jours</h3><p>Vous m'envoyez vos textes et photos, ou je vous aide à les rédiger.</p></div>
+      <div><h3>Vous restez propriétaire</h3><p>Le contenu et le nom de domaine vous appartiennent.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="exemples">
+  <div class="wrap">
+    <h2>Quelques sites déjà réalisés</h2>
+    <p class="intro">Trois exemples de sites créés de la même façon : sur mesure, avec une identité et un contenu propres à chaque activité.</p>
+    <div class="exemples">
+      <a class="exemple" href="https://monqr.netlify.app/" target="_blank" rel="noopener">
+        <h3>MonQR</h3>
+        <p>Site d'une page pour un service de QR codes personnalisés : le principe en trois gestes, les usages par métier et un contact direct.</p>
+        <span>Voir le site</span>
+      </a>
+      <a class="exemple" href="https://automatepro-solutions.netlify.app/" target="_blank" rel="noopener">
+        <h3>AutomatePro Solutions</h3>
+        <p>Site d'entreprise : présentation des solutions, méthode de travail, engagements et demande de devis.</p>
+        <span>Voir le site</span>
+      </a>
+      <a class="exemple" href="https://grappling-maison.c-l-c.workers.dev/" target="_blank" rel="noopener">
+        <h3>Dojo Maison</h3>
+        <p>Site de contenu sur le grappling : guides pratiques, avis produit et pages dédiées, avec plusieurs pages liées entre elles.</p>
+        <span>Voir le site</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="wrap">
+    <h2>Une seule formule, un prix fixe</h2>
+    <p class="intro">Vous payez la création une seule fois. L'abonnement annuel couvre l'hébergement, le nom de domaine et les petites modifications.</p>
+
+    <div class="formules">
+      <article class="formule pro">
+        <h3>Site vitrine Essentiel</h3>
+        <p class="for">Pour être présent en ligne simplement.</p>
+        <div class="prix">500 €<span> à la création</span></div>
+        <p class="abo">puis 120 € par an</p>
+        <ul>
+          <li>Site sur mesure d'une page : présentation, horaires, contact</li>
+          <li>Affichage adapté au mobile</li>
+          <li>Nom de domaine et hébergement inclus</li>
+          <li>Contact direct par email en un clic</li>
+          <li>1 modification par trimestre</li>
+        </ul>
+        <a class="btn" href="#contact">Demander mon site</a>
+      </article>
+    </div>
+
+    <ul class="notes">
+      <li>Engagement de 12 mois à partir de la mise en ligne.</li>
+      <li>Les modifications non incluses coûtent 30 € chacune.</li>
+      <li>Sans abonnement, le site n'est plus hébergé après la première année.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="etapes">
+  <div class="wrap">
+    <h2>Comment ça se passe</h2>
+    <ol class="etapes">
+      <li><h3>Vous me contactez</h3><p>Un échange rapide pour comprendre votre activité.</p></li>
+      <li><h3>Vous payez la moitié</h3><p>50 % à la commande, 50 % à la livraison.</p></li>
+      <li><h3>Je crée votre site</h3><p>Livraison sous 7 jours, avec une retouche incluse avant la mise en ligne.</p></li>
+      <li><h3>Vous êtes en ligne</h3><p>L'abonnement démarre le jour de la mise en ligne.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions fréquentes</h2>
+    <div style="margin-top:2rem">
+      <details><summary>Dois-je fournir les textes et les photos ?</summary><p>Vous pouvez les fournir, ou je vous aide à les rédiger à partir de quelques informations sur votre activité. Pour les photos, les vôtres donnent toujours le meilleur résultat.</p></details>
+      <details><summary>Que se passe-t-il si je veux arrêter ?</summary><p>Après les 12 mois d'engagement, vous pouvez arrêter quand vous voulez. Votre nom de domaine et votre contenu vous appartiennent, vous pouvez les récupérer.</p></details>
+      <details><summary>Mon site apparaîtra-t-il sur Google ?</summary><p>Oui, il est préparé pour être trouvé par Google. Comptez quelques semaines pour qu'il apparaisse dans les résultats.</p></details>
+      <details><summary>Et si j'ai besoin d'une modification urgente ?</summary><p>Écrivez-moi : les modifications comprises dans votre formule sont traitées en priorité, les autres sont facturées 30 €.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Parlons de votre site</h2>
+    <p class="intro">Un clic ouvre votre messagerie. Dites-moi quelle est votre activité, je vous réponds sous 48 heures avec une proposition.</p>
+
+    <p style="margin-top:2rem"><a class="btn" href="mailto:vitriofrance@outlook.fr?subject=Demande%20de%20site%20vitrine&body=Bonjour%2C%0D%0A%0D%0AMon%20nom%20%3A%20%0D%0AMon%20activit%C3%A9%20%3A%20%0D%0AMon%20t%C3%A9l%C3%A9phone%20%3A%20%0D%0A%0D%0AMerci.">Envoyer un email</a></p>
+    <p class="intro" style="margin-top:1.2rem">Ou écrivez-moi directement à <a href="mailto:vitriofrance@outlook.fr" style="color:#fff">vitriofrance@outlook.fr</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Vitrio</strong></p>
+    <p>Email : <a href="mailto:vitriofrance@outlook.fr">vitriofrance@outlook.fr</a></p>
+  </div>
+</footer>
+</body>
+</html>
